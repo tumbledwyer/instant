@@ -9,19 +9,19 @@ services:
       - mongo_atnaUrl=mongodb://mongo:27017
       - api_authenticationTypes=["token", "basic"]
       - authentication_enableCustomTokenAuthentication=true
-    ports:
-      - "8080:8080"
-      - "5000:5000"
-      - "5001:5001"
-      - "5050:5050"
-      - "5051:5051"
-      - "5052:5052"
+    # ports:
+      # - "8080:8080"
+      # - "5000:5000"
+      # - "5001:5001"
+      # - "5050:5050"
+      # - "5051:5051"
+      # - "5052:5052"
 
   console:
     container_name: openhim-console
     image: jembi/openhim-console:1.14
-    ports:
-        - "9000:80"
+    # ports:
+    #     - "9000:80"
     depends_on:
       - core
 
