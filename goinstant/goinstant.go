@@ -16,6 +16,8 @@ var f embed.FS
 var yamlConfig []byte
 var cfg Config
 
+var BuildVersion string = "development"
+
 type Package struct {
 	Name string `yaml:"name"`
 	ID   string `yaml:"id"`
@@ -172,7 +174,7 @@ func main() {
 	}
 	color.Green(string(data))
 
-	color.Cyan("Version: 1.02b")
+	color.Cyan("Version: " + BuildVersion)
 	color.Blue("Remember to stop applications or they will continue to run and have an adverse impact on performance.")
 
 	if len(os.Args) > 1 {
