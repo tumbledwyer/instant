@@ -17,7 +17,7 @@ jobs:
         go-version: 1.17
 
     - name: Build Releases
-      run:  cd ./goinstant && ./buildreleases.sh
+      run:  cd ./goinstant && ./buildreleases.sh ${{github.ref_name}}
 
     - name: Test binaries
       run: ./goinstant/bin/goinstant-linux help
